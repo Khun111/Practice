@@ -3,7 +3,7 @@
  * add_node - adds new node to the beginning
  * @head: pointer to head pointer
  * @str: member of struct
- * Return: number of nodes
+ * Return: new node
 */
 list_t *add_node(list_t **head, const char *str)
 {
