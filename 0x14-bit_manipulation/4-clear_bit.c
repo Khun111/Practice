@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * set_bit - replaces bit at index to 0(OFF)
+ * clear_bit - replaces bit at index to 0(OFF)
  * @n: parameter
  * @index: position
  * Return: 1 on success
