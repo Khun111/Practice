@@ -25,11 +25,12 @@ int main(int count, char **value)
 	if (count != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
+		exit(97);
 	}
 
 	file_fro = open(value[1], O_RDONLY);
 	check_valid(file_fro, value[1], 'O');
-	file_to = open(value[2], O_WRONLY | O_CREAT | O_TRUNC);
+	file_to = open(value[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	check_valid(file_to, value[2], 'W');
 	while (c_read == 1024)
 	{
