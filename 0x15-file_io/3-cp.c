@@ -33,7 +33,7 @@ int main(int count, char **value)
 	check_valid(file_to, value[2], 'W');
 	while (c_read == 1024)
 	{
-		c_read = read(file_fro, buf, 1024)
+		c_read = read(file_fro, buf, 1024);
 		if (c_read == -1)
 			check_valid(c_read, value[1], 'O');
 		c_written = write(file_to, buf, c_read);
@@ -42,9 +42,9 @@ int main(int count, char **value)
 	}
 	exit1 = close(file_fro);
 	if (exit1 == -1)
-		check_valid(exit1, value[1], 'C');
+		check_valid(exit1, NULL, 'C');
 	exit2 = close(file_to);
 	if (exit2 == -1)
-		check_valid(exit2, value[2], 'C');
+		check_valid(exit2, NULL, 'C');
 	return (0);
 }
