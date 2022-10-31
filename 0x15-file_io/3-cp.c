@@ -1,5 +1,5 @@
 #include "main.h"
-void check_valid(int val, char *filename, mode)
+void check_valid(int val, char *filename, char mode)
 {
 	if (val == -1 && mode == 'O')
 	{
@@ -19,7 +19,7 @@ void check_valid(int val, char *filename, mode)
 }
 int main(int count, char **value)
 {
-	int file_fro, file_to, c_read = 1024, c_written;
+	int file_fro, file_to, c_read = 1024, exit1, exit2, c_written;
 	char buf[1024];
 
 	if (count != 3)
@@ -27,12 +27,24 @@ int main(int count, char **value)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
 	}
 
-	file_fro = open(value[1], O_RDONLY | O_CREAT | O_TRUNC);
+	file_fro = open(value[1], O_RDONLY);
 	check_valid(file_fro, value[1], 'O');
-	file_to = open(value[2], O_RDONLY | O_CREAT | O_TRUNC);
-	check_valid(file_to, value[2], 'O');
+	file_to = open(value[2], O_WRONLY | O_CREAT | O_TRUNC);
+	check_valid(file_to, value[2], 'W');
 	while (c_read == 1024)
 	{
-
+		c_read = read(file_fro, buf, 1024)
+		if (c_read == -1)
+			check_valid(c_read, value[1], 'O');
+		c_written = write(file_to, buf, c_read);
+		if (c_written == -1)
+			check_valid(c_written, value[2], 'W');
 	}
+	exit1 = close(file_fro);
+	if (exit1 == -1)
+		check_valid(exit1, value[1], 'C');
+	exit2 = close(file_to);
+	if (exit2 == -1)
+		check_valid(exit2, value[2], 'C');
+	return (0);
 }
