@@ -1,4 +1,10 @@
 #include "main.h"
+/*
+ * check_valid - checks for valid files
+ * @val: value to check
+ * @filename: file to check
+ * @mode:  open, write and close
+*/
 void check_valid(int val, char *filename, char mode)
 {
 	if (val == -1 && mode == 'O')
@@ -17,10 +23,17 @@ void check_valid(int val, char *filename, char mode)
 		exit(100);
 	}
 }
+/*
+ * main - main function
+ * @count: number of cmd line args
+ * @value: array of args strings
+ * Return: 0
+*/
 int main(int count, char **value)
 {
 	int file_fro, file_to, c_read = 1024, exit1, exit2, c_written;
 	char buf[1024];
+	unsigned int permissions = (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
 	if (count != 3)
 	{
@@ -30,7 +43,7 @@ int main(int count, char **value)
 
 	file_fro = open(value[1], O_RDONLY);
 	check_valid(file_fro, value[1], 'O');
-	file_to = open(value[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	file_to = open(value[2], O_WRONLY | O_CREAT | O_TRUNC, permissions);
 	check_valid(file_to, value[2], 'W');
 	while (c_read == 1024)
 	{

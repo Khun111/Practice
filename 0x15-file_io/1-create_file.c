@@ -1,11 +1,23 @@
 #include "main.h"
+/*
+ * _strlen - finds length of string
+ * @txt: string
+ * Return: length
+*/
 int _strlen (char *txt)
 {
 	int length = 0;
+
 	for (; txt[length]; length++)
 	;
 	return (length);
 }
+/*
+ * create_file - creates a file
+ * @filename: file to create
+ * @text_content: text to write
+ * Return: 1 on success
+*/
 int create_file(const char *filename, char *text_content)
 {
 	int fd, c_written;
