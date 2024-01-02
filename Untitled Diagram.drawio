@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-02T18:28:57.035Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="OURwYlyaR1QJ1_4j5UZN" version="22.1.16" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-02T18:49:21.465Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="vpwng_EMOqErHVv9TrXY" version="22.1.16" type="github">
   <diagram name="Page-1" id="ri_uI1SEH4h7R6JElfUO">
     <mxGraphModel dx="548" dy="433" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -12,8 +12,76 @@
         <mxCell id="yNuguad6mRy1zK03DagX-1" value="" style="ellipse;shape=doubleEllipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="20" y="50" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="yNuguad6mRy1zK03DagX-3" value="State1" style="shape=folder;align=center;verticalAlign=middle;fontStyle=0;tabWidth=100;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="yNuguad6mRy1zK03DagX-3" value="Loan Origination" style="shape=folder;align=center;verticalAlign=middle;fontStyle=0;tabWidth=100;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="160" y="30" width="140" height="90" as="geometry" />
+        </mxCell>
+        <UserObject label="Customer&lt;br&gt;applies" placeholders="1" name="Variable" id="yNuguad6mRy1zK03DagX-4">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="1">
+            <mxGeometry x="80" y="40" width="80" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Rejected" placeholders="1" name="Variable" id="yNuguad6mRy1zK03DagX-5">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="1">
+            <mxGeometry x="330" y="90" width="80" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Approved" placeholders="1" name="Variable" id="yNuguad6mRy1zK03DagX-6">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="1">
+            <mxGeometry x="330" y="40" width="80" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Default&lt;br&gt;Period&lt;br&gt;Due" placeholders="1" name="Variable" id="yNuguad6mRy1zK03DagX-7">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="1">
+            <mxGeometry x="510" y="130" width="50" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yNuguad6mRy1zK03DagX-8" value="Loan Origination" style="shape=folder;align=center;verticalAlign=middle;fontStyle=0;tabWidth=100;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="430" y="30" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yNuguad6mRy1zK03DagX-11" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="79.5" as="sourcePoint" />
+            <mxPoint x="430" y="80" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="79.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yNuguad6mRy1zK03DagX-12" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="499.5" y="120" as="sourcePoint" />
+            <mxPoint x="499.5" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yNuguad6mRy1zK03DagX-13" value="Debt Collection" style="shape=folder;align=center;verticalAlign=middle;fontStyle=0;tabWidth=100;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="450" y="200" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yNuguad6mRy1zK03DagX-16" value="Reporting and Analytics" style="shape=folder;align=center;verticalAlign=middle;fontStyle=0;tabWidth=100;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="210" y="200" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yNuguad6mRy1zK03DagX-17" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="260" as="sourcePoint" />
+            <mxPoint x="350" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="Cash&lt;br&gt;Flow" placeholders="1" name="Variable" id="yNuguad6mRy1zK03DagX-18">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="1">
+            <mxGeometry x="370" y="190" width="50" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yNuguad6mRy1zK03DagX-19" value="" style="ellipse;html=1;shape=endState;fillColor=strokeColor;" vertex="1" parent="1">
+          <mxGeometry x="100" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yNuguad6mRy1zK03DagX-20" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=-0.029;exitY=0.6;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="yNuguad6mRy1zK03DagX-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="254.5" as="sourcePoint" />
+            <mxPoint x="130" y="254.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="206" y="255" />
+              <mxPoint x="210" y="255" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
